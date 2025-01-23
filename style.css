@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #85D8CE, #085078);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    width: 450px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    font-size: 1.2rem;
+    animation: fadeIn 1s ease;
+}
+
+.header {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #107476;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+}
+
+#task-input:focus {
+    border-color: #107476;
+}
+
+#add-task-btn {
+    width: 15%;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: #107476;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-task-btn:hover {
+    background-color: #085078;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task label {
+    font-weight: 600;
+    color: white;
+    width: 90%;
+}
+
+.task .delete-btn {
+    padding: 8px;
+    font-size: 0.9rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task .delete-btn:hover {
+    background-color: #e60000;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task.dark-green {
+    background-color: #107476;
+}
+
+.task.green {
+    background-color: #65b89f;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
